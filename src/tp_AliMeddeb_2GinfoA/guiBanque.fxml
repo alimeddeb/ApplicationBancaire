@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" styleClass="app" stylesheets="@style-login.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tp_AliMeddeb_2GinfoA.guiLoginController">
+   <children>
+      <AnchorPane layoutX="63.0" layoutY="110.0" prefHeight="301.0" prefWidth="671.0" styleClass="login-box" stylesheets="@style-login.css">
+         <children>
+            <AnchorPane layoutX="36.0" layoutY="19.0" prefHeight="266.0" prefWidth="328.0" styleClass="id-box" stylesheets="@style-login.css">
+               <children>
+                  <Label layoutX="14.0" layoutY="151.0" styleClass="label-login" stylesheets="@style-login.css" text="Mot de passe" />
+                  <PasswordField fx:id="mdp" layoutX="29.0" layoutY="189.0" prefHeight="26.0" prefWidth="244.0" promptText="••••••" styleClass="login-credentials" />
+                  <TextField fx:id="login" layoutX="27.0" layoutY="78.0" prefHeight="26.0" prefWidth="260.0" promptText="identifiant" styleClass="login-credentials" />
+                  <Label layoutX="14.0" layoutY="31.0" styleClass="label-login" stylesheets="@style-login.css" text="Identifiant" />
+               </children>
+            </AnchorPane>
+            <Button layoutX="394.0" layoutY="70.0" mnemonicParsing="false" onMouseClicked="#authentification" prefHeight="61.0" prefWidth="254.0" styleClass="login-bouton-acceder" stylesheets="@style-login.css" text="Accéder" />
+            <Button layoutX="394.0" layoutY="177.0" mnemonicParsing="false" onMouseClicked="#quitter_application" prefHeight="61.0" prefWidth="254.0" styleClass="login-bouton-quitter" stylesheets="@style-login.css" text="Quitter" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="62.0" layoutY="14.0" prefHeight="80.0" prefWidth="580.0" styleClass="login-box" stylesheets="@style-login.css">
+         <children>
+            <Text layoutX="164.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="ENSIT Bank" wrappingWidth="402.0455722808838" />
+            <ImageView fitHeight="79.0" fitWidth="87.0" layoutX="33.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/online-banking-finance-icon-white-bank-building-3d212784a06f770e32f3aaadbe4f2259.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

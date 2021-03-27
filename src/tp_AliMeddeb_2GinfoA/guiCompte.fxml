@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" styleClass="app" stylesheets="@style-compte.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tp_AliMeddeb_2GinfoA.guiCompteController">
+   <children>
+      <AnchorPane layoutX="32.0" layoutY="27.0" prefHeight="405.0" prefWidth="736.0" styleClass="login-box">
+         <children>
+            <Button fx:id="bouton_retour" layoutX="28.0" layoutY="347.0" mnemonicParsing="false" onMouseClicked="#retour" prefHeight="30.0" prefWidth="141.0" styleClass="login-bouton-quitter" text="Retour" />
+            <AnchorPane fx:id="interfaceCompte" layoutX="28.0" layoutY="14.0" prefHeight="167.0" prefWidth="529.0" styleClass="info-client">
+               <children>
+                  <GridPane layoutX="21.0" layoutY="2.0" prefHeight="167.0" prefWidth="491.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.0" minWidth="10.0" prefWidth="151.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="259.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="29.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label styleClass="info-client-text-left" text="Client" />
+                        <Label styleClass="info-client-text-left" text="Type" GridPane.rowIndex="1" />
+                        <Label styleClass="info-client-text-left" text="RIB" GridPane.rowIndex="2" />
+                        <Label styleClass="info-client-text-left" text="Date de creation" GridPane.rowIndex="3" />
+                        <Text fx:id="nomCompletClient" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" GridPane.columnIndex="1" />
+                        <Text fx:id="compteType" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Text fx:id="compteRIB" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Text fx:id="compteDateCreation" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label styleClass="info-client-text-left" text="Solde" GridPane.rowIndex="4" />
+                        <Text fx:id="compteSolde" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <Button fx:id="bouton_refresh" layoutX="474.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#refresh" prefHeight="0.0" prefWidth="39.0" styleClass="login-bouton-acceder">
+                     <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="-1.0" top="-1.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Button fx:id="bouton_retrait" layoutX="573.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#retrait" prefHeight="39.0" prefWidth="151.0" styleClass="login-bouton-acceder" text="Retrait" />
+            <Button fx:id="bouton_virement" layoutX="573.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#virement" prefHeight="39.0" prefWidth="151.0" styleClass="login-bouton-acceder" text="Virement" />
+            <Button fx:id="bouton_versement" layoutX="573.0" layoutY="93.0" mnemonicParsing="false" onMouseClicked="#versement" prefHeight="39.0" prefWidth="151.0" styleClass="login-bouton-acceder" text="Versement" />
+            <AnchorPane fx:id="compteInfoEpargne" layoutX="28.0" layoutY="197.0" prefHeight="138.0" prefWidth="529.0" styleClass="info-client">
+               <children>
+                  <GridPane layoutX="21.0" prefHeight="143.0" prefWidth="503.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="277.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.0" minWidth="10.0" prefWidth="226.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="29.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="191.0" styleClass="info-client-text-left" text="Statut" />
+                        <Label styleClass="info-client-text-left" text="Date de dernier versement" GridPane.rowIndex="1" />
+                        <Label styleClass="info-client-text-left" text="Montant de dernier versement" GridPane.rowIndex="2" />
+                        <Text fx:id="compteActif" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" GridPane.columnIndex="1" />
+                        <Text fx:id="compteDateVersement" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Text fx:id="compteMontantVersement" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <Button fx:id="bouton_pret" layoutX="573.0" layoutY="252.0" mnemonicParsing="false" onMouseClicked="#pret" prefHeight="39.0" prefWidth="151.0" styleClass="login-bouton-acceder" text="Pret" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

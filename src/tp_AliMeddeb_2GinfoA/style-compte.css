@@ -1,0 +1,81 @@
+.app {
+    -fx-background-image: url("img/background.jpg");
+}
+
+.bg {
+    -fx-background-color: rgb(246, 242, 250);
+}
+
+.login-box {
+    -fx-background-color: linear-gradient(from 10% 50% to 60% 40%, rgb(0, 0, 0), rgba(91, 8, 133));
+    -fx-opacity: 0.92;
+}
+
+.id-box {
+    -fx-background-color: rgb(229, 229, 229);
+}
+
+.title {
+    -fx-fill: white;
+    -fx-font-size: 50px;
+    -fx-font-family: "High Tower Text";
+}
+
+
+.info-client{
+    -fx-background-color: rgb(198, 158, 203);
+    -fx-opacity:1;
+}
+
+.info-client-text-left{
+    -fx-text-fill: black;
+    -fx-font-size: 18px;
+}
+
+.login-bouton-acceder{
+    -fx-background-color: rgb(132, 215, 133);
+    -fx-text-fill: rgb(91, 8, 133);
+    -fx-font-size: 20px;
+}
+
+.login-bouton-acceder:hover{
+    -fx-background-color: rgb(43, 198, 14);
+    -fx-text-fill: rgb(91, 8, 133);
+    -fx-font-size: 20px;
+}
+
+.login-bouton-quitter{
+    -fx-background-color: rgb(255, 212, 212);
+    -fx-text-fill: rgb(91, 8, 133);
+    -fx-font-size: 20px;
+}
+
+.login-bouton-quitter:hover{
+    -fx-background-color: rgb(236, 31, 31);
+    -fx-text-fill: rgb(151, 43, 205);
+    -fx-font-size: 20px;
+}
+
+.Text-VIP{
+    -fx-text-fill: gold;
+    -fx-font-size: 60px;
+}
+
+.TEXT-data{
+    -fx-text-fill: black;
+    -fx-font-size: 20px;
+}
+
+.TEXT-Solde-value{
+    -fx-fill: black;
+    -fx-font-size: 20px;
+}
+
+.bouton-ajout-compte{
+    -fx-background-color: rgb(118, 183, 80);
+}
+
+.bouton-supprimer-compte{
+    -fx-background-color: rgb(212, 48, 78);
+}
+

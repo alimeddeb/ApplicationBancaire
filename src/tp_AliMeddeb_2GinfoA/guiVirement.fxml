@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="757.0" styleClass="app" stylesheets="@style-virement.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tp_AliMeddeb_2GinfoA.guiVirementController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="95.0" prefHeight="314.0" prefWidth="353.0" styleClass="login-box">
+         <children>
+            <GridPane layoutX="14.0" layoutY="45.0" prefHeight="98.0" prefWidth="335.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="98.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.0" minWidth="10.0" prefWidth="237.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="60.0" minHeight="6.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="83.0" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label styleClass="info-client-text-left" text="Client" />
+                  <Label styleClass="info-client-text-left" text="Type" GridPane.rowIndex="1" />
+                  <Label styleClass="info-client-text-left" text="RIB" GridPane.rowIndex="2" />
+                  <Text fx:id="nomCompletClient" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" GridPane.columnIndex="1" />
+                  <Text fx:id="compteType" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Text fx:id="compteRIB" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="14.0" layoutY="173.0" prefHeight="75.0" prefWidth="328.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="153.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="175.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label style="-fx-font-size: 20;" styleClass="info-client-text-left" text="Solde" GridPane.rowIndex="1" />
+                  <Text fx:id="compteSolde" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label styleClass="info-client-text-left" text="Solde Minimal" />
+                  <Text fx:id="compteSoldeMin" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <Button fx:id="bouton_retour" layoutX="11.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#retour" prefHeight="30.0" prefWidth="141.0" styleClass="login-bouton-quitter" text="Annuler" />
+            <Label layoutX="96.0" style="-fx-font-size: 24; -fx-text-fill: white;" text="Compte source" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="386.0" layoutY="95.0" prefHeight="314.0" prefWidth="344.0" styleClass="login-box">
+         <children>
+            <Label layoutX="67.0" style="-fx-font-size: 24; -fx-text-fill: white;" text="Compte destination" />
+            <GridPane layoutX="25.0" layoutY="109.0" prefHeight="75.0" prefWidth="314.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="88.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.0" minWidth="10.0" prefWidth="226.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="60.0" minHeight="6.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label styleClass="info-client-text-left" text="Client" />
+                  <Label styleClass="info-client-text-left" text="RIB" GridPane.rowIndex="1" />
+                  <Text fx:id="nomCompletDestination" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" wrappingWidth="217.0" GridPane.columnIndex="1" />
+                  <Text fx:id="RIBcompteDestination" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" wrappingWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="-3.0" layoutY="53.0" prefHeight="30.0" prefWidth="258.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="60.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="198.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="rib_destination" prefHeight="30.0" prefWidth="203.0" GridPane.columnIndex="1" />
+                  <Label prefHeight="36.0" prefWidth="63.0" styleClass="info-client-text-left" text="  RIB" />
+               </children>
+            </GridPane>
+            <Button fx:id="bouton_verifier_RIB" layoutX="268.0" layoutY="52.0" mnemonicParsing="false" onMouseClicked="#verifier_rib_destination" prefHeight="16.0" prefWidth="69.0" styleClass="authentifier" text="Verifier" />
+            <GridPane layoutX="10.0" layoutY="215.0" prefHeight="30.0" prefWidth="314.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="107.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="217.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="montant_envoi" prefHeight="30.0" prefWidth="206.0" GridPane.columnIndex="1" />
+                  <Label prefHeight="36.0" prefWidth="148.0" styleClass="info-client-text-left" text="Montant" />
+               </children>
+            </GridPane>
+            <Button fx:id="bouton_envoi_virement" layoutX="172.0" layoutY="260.0" mnemonicParsing="false" onMouseClicked="#envoi_virement" prefHeight="31.0" prefWidth="151.0" styleClass="login-bouton-acceder" text="Envoyer" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="274.0" layoutY="14.0" prefHeight="51.0" prefWidth="209.0" styleClass="login-box">
+         <children>
+            <Text layoutX="24.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text-VIP" text="Virement" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

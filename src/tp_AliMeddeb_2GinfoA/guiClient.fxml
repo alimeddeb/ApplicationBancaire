@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" styleClass="app" stylesheets="@style-client.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tp_AliMeddeb_2GinfoA.guiClientController">
+   <children>
+      <AnchorPane layoutX="32.0" layoutY="27.0" prefHeight="405.0" prefWidth="736.0" styleClass="login-box">
+         <children>
+            <AnchorPane layoutX="29.0" layoutY="24.0" prefHeight="185.0" prefWidth="380.0" styleClass="info-client">
+               <children>
+                  <GridPane layoutX="12.0" layoutY="16.0" prefHeight="154.0" prefWidth="370.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="123.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="264.0" minWidth="10.0" prefWidth="241.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label styleClass="info-client-text-left" text="Nom" />
+                        <Label styleClass="info-client-text-left" text="Prenom" GridPane.rowIndex="1" />
+                        <Label styleClass="info-client-text-left" text="CIN" GridPane.rowIndex="2" />
+                        <Text fx:id="nomClient" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" wrappingWidth="231.89453125" GridPane.columnIndex="1" />
+                        <Text fx:id="prenomClient" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" wrappingWidth="232.89453125" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Text fx:id="cinClient" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" wrappingWidth="232.89453125" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="details_salarie" layoutX="29.0" layoutY="220.0" prefHeight="82.0" prefWidth="382.0" styleClass="info-client">
+               <children>
+                  <GridPane layoutX="18.0" layoutY="1.0" prefHeight="81.0" prefWidth="355.0" styleClass="TEXT-data">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="118.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="0.0" prefWidth="262.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label styleClass="info-client-text-left" text="Salaire" GridPane.rowIndex="1" />
+                        <Label styleClass="info-client-text-left" text="Profession" />
+                        <Text fx:id="professionClient" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" wrappingWidth="245.89453125" GridPane.columnIndex="1" />
+                        <Text fx:id="salaireClient" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" wrappingWidth="241.89453125" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="details_vip" layoutX="29.0" layoutY="224.0" prefHeight="114.0" prefWidth="382.0" styleClass="info-client">
+               <children>
+                  <GridPane layoutX="18.0" layoutY="15.0" prefHeight="90.0" prefWidth="355.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="126.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="0.0" prefWidth="225.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label styleClass="info-client-text-left" text="Entreprise:" />
+                        <Label styleClass="info-client-text-left" text="Employés:" GridPane.rowIndex="1" />
+                        <Label styleClass="info-client-text-left" text="Chiffre Affaire" GridPane.rowIndex="2" />
+                        <Text fx:id="entrepriseClient" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" wrappingWidth="219.89453125" GridPane.columnIndex="1" />
+                        <Text fx:id="nbEmployesClient" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" wrappingWidth="218.89453125" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Text fx:id="chiffreAffaireClient" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TEXT-Solde-value" text="Text" wrappingWidth="217.89453125" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="logo_VIP" layoutX="423.0" layoutY="28.0" prefHeight="90.0" prefWidth="121.0">
+               <children>
+                  <ImageView fitHeight="82.0" fitWidth="83.0" layoutX="4.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/logoVIP.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button fx:id="bouton_consulter_compte_epargne" layoutX="429.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#consulter_compte_epargne" prefHeight="44.0" prefWidth="141.0" styleClass="login-bouton-acceder" text="Compte epargne" />
+            <Button fx:id="bouton_retour" layoutX="29.0" layoutY="350.0" mnemonicParsing="false" onMouseClicked="#retour" prefHeight="30.0" prefWidth="141.0" styleClass="login-bouton-quitter" text="Retour" />
+            <Button fx:id="bouton_consulter_compte_normal" layoutX="429.0" layoutY="117.0" mnemonicParsing="false" onMouseClicked="#consulter_compte_normal" prefHeight="30.0" prefWidth="141.0" styleClass="login-bouton-acceder" text="Compte" />
+            <Button fx:id="bouton_consulter_compte_vip" layoutX="429.0" layoutY="117.0" mnemonicParsing="false" onMouseClicked="#consulter_compte_vip" prefHeight="44.0" prefWidth="141.0" styleClass="login-bouton-acceder" text="Compte VIP" />
+            <Button fx:id="bouton_ajout_compte_normal" layoutX="593.0" layoutY="117.0" mnemonicParsing="false" onMouseClicked="#ajout_compte_normal" prefHeight="44.0" prefWidth="47.0" styleClass="bouton-ajout-compte" text="+" />
+            <Button fx:id="bouton_ajout_compte_epargne" layoutX="593.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#ajout_compte_epargne" prefHeight="44.0" prefWidth="47.0" styleClass="bouton-ajout-compte" text="+" />
+            <Button fx:id="bouton_supprimer_compte_normal" layoutX="658.0" layoutY="117.0" mnemonicParsing="false" onMouseClicked="#supprimer_compte_normal" prefHeight="44.0" prefWidth="47.0" styleClass="bouton-supprimer-compte" text="x" />
+            <Button fx:id="bouton_ajout_compte_vip" layoutX="593.0" layoutY="117.0" mnemonicParsing="false" onMouseClicked="#ajout_compte_vip" prefHeight="44.0" prefWidth="47.0" styleClass="bouton-ajout-compte" stylesheets="@style-login.css" text="+" />
+            <Button fx:id="bouton_supprimer_compte_vip" layoutX="658.0" layoutY="117.0" mnemonicParsing="false" onMouseClicked="#supprimer_compte_vip" prefHeight="44.0" prefWidth="47.0" styleClass="bouton-supprimer-compte" text="x" />
+            <Button fx:id="bouton_supprimer_compte_epargne" layoutX="658.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#supprimer_compte_epargne" prefHeight="44.0" prefWidth="47.0" styleClass="bouton-supprimer-compte" text="x" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
